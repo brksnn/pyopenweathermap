@@ -2,9 +2,8 @@
 
 import pyowm
 
-#API-KEY by buraksunan@yahoo.com.tr
-#from http://openweathermap.org
-owm = pyowm.OWM('7dc287b200e9a8bfe0d0c5fe61b01c87')
+API = input("Enter a valid API Key: ")
+owm = pyowm.OWM(API)
 #apicheck = owm.is_API_online()
 
 def Multi_Days_Forecasts(LOCATION, LIMIT):
