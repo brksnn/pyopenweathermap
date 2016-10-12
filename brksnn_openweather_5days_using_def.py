@@ -51,7 +51,7 @@ def PRINT_DATA(LOC, WEA, LIMIT, TIME):
     print("CURRENT TIME: " + TIME + "\n")
     #WEATHER DETAILS
     for i in range(0,LIMIT):
-        print("WEATHER DETAILS: " + "GUN_" + str(i+1))
+        print("WEATHER DETAILS: " + "DAY_" + str(i+1))
         print("WIND SPEED: " + str(WEA[0][i]['speed']) + " m/s")
         if 'deg' in WEA[0]:
             print("WIND DIRECTION: " + str(WEA[0][i]['deg']) + "°")
