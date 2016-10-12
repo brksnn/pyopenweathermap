@@ -51,7 +51,7 @@ print("COUNTRY: " + country)
 print("Coord.: " + str(citylat) + ", " + str(citylon))
 print("CURRENT TIME: " + time + "\n")
 for i in range(0,LIMIT):
-	print("WEATHER DETAILS: " + "GUN_" + str(i+1))
+	print("WEATHER DETAILS: " + "DAY_" + str(i+1))
 	#print("SUNSET TIME: " + sunset_time[i])
 	#print("SUNRISE TIME: " + sunrise_time[i])
 	print("WIND SPEED: " + str(wind[i]['speed']) + " m/s")
