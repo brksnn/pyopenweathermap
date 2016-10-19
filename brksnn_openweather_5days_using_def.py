@@ -2,10 +2,6 @@
 
 import pyowm
 
-API = input("Enter a valid API Key: ")
-owm = pyowm.OWM(API)
-#apicheck = owm.is_API_online()
-
 def Multi_Days_Forecasts(LOCATION, LIMIT):
     """Multi-Days Forecasts"""
     if isinstance(LOCATION, str) == True and LOCATION.isdigit() == False:
@@ -73,6 +69,10 @@ def INPUT():
     f = input("Enter the location name (e.g.'Istanbul,TR') or location id: ")
     limit = input("How many days do you want?  ")
     return (f,int(limit))
+
+API = input("Enter a valid API Key: ")
+owm = pyowm.OWM(API)
+#apicheck = owm.is_API_online()
 
 F = INPUT() #call the INPUT function
 FORE = Multi_Days_Forecasts(F[0], F[1])
