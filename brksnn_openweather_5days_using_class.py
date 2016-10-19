@@ -69,14 +69,12 @@ class PyOpenWeatherMap():
             print("STATUS: " + self.status[i])
             print("\n")
 
-def Main():
-        API = input("Enter a valid API Key: ")
-        location = input("Enter the location name (e.g.'Istanbul,TR') or location id: ")
-        limit = int(input("How many days do you want?  "))
-        App = PyOpenWeatherMap(API,location,limit)
-        App.Multi_Days_Forecasts()
-        App.Location_Data()
-        App.Weather_Data()
-        App.PRINT_DATA()
-        
-Main()
+if __name__ == "__main__":
+    API = input("Enter a valid API Key: ")
+    location = input("Enter the location name (e.g.'Istanbul,TR') or location id: ")
+    limit = int(input("How many days do you want?  "))
+    App = PyOpenWeatherMap(API,location,limit)
+    App.Multi_Days_Forecasts()
+    App.Location_Data()
+    App.Weather_Data()
+    App.PRINT_DATA()
