@@ -1,6 +1,8 @@
 # pyopenweathermap
 OpenWeatherMap example using pyowm
 
+You need to get a valid API KEY from OpenWeatherMap
+
 For detail info about pyowm, go to
 https://github.com/csparpa/pyowm
 
