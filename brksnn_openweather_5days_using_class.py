@@ -3,13 +3,11 @@
 import pyowm
 
 class PyOpenWeatherMap():
-    def __init__(self):
-        self.API = input("Enter a valid API Key: ")
+    def __init__(self,API,location,limit):
+        self.API = API
         self.owm = pyowm.OWM(self.API)
-        self.loc = input("Enter the location name (e.g.'Istanbul,TR') or location id: ")
-        self.limit = input("How many days do you want?  ")
-        self.limit = int(self.limit)
-        self.PRINT_DATA()
+        self.loc = location
+        self.limit = limit
     
     def Multi_Days_Forecasts(self):
         """Multi-Days Forecasts"""
@@ -51,9 +49,6 @@ class PyOpenWeatherMap():
                 self.temperature,self.humidity,self.status)
     
     def PRINT_DATA(self):
-        self.Multi_Days_Forecasts()
-        self.Location_Data()
-        self.Weather_Data()
         #CITY DETAILS
         print("CITY: " + self.cityname)
         print("COUNTRY: " + self.country)
@@ -74,4 +69,14 @@ class PyOpenWeatherMap():
             print("STATUS: " + self.status[i])
             print("\n")
 
-F = PyOpenWeatherMap()
+def Main():
+        API = input("Enter a valid API Key: ")
+        location = input("Enter the location name (e.g.'Istanbul,TR') or location id: ")
+        limit = int(input("How many days do you want?  "))
+        App = PyOpenWeatherMap(API,location,limit)
+        App.Multi_Days_Forecasts()
+        App.Location_Data()
+        App.Weather_Data()
+        App.PRINT_DATA()
+        
+Main()
