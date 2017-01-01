@@ -58,7 +58,10 @@ class PyOpenWeatherMap():
         for i in range(0,self.limit):
             print("WEATHER DETAILS: " + "DAY_" + str(i+1))
             print("WIND SPEED: " + str(self.wind[i]['speed']) + " m/s")
-            print("SNOW: " + str(self.snow[i]) + " mm")	
+            if 'all' in self.snow:
+                print("SNOW: " + str(self.snow[i]['all']) + " mm")	
+            else:
+                print("SNOW: " + str(0) + " mm")
             if 'all' in self.rain:
                 print("RAIN: " + str(self.rain[i]['all']) + " mm")
             else:
